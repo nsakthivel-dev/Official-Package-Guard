@@ -26,6 +26,7 @@ dist-ssr
 
 # Binaries & Installers - NEVER COMMIT EXEs OR INSTALLERS
 *.exe
+!public/PackageGuard-Setup.exe
 *.msi
 *.zip
 *.tar.gz
