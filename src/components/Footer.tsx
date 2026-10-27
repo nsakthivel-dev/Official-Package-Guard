@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Github, ExternalLink } from 'lucide-react';
+import { Github, ExternalLink } from 'lucide-react';
 import { GITHUB_REPO_URL, GITHUB_RELEASES_URL, GITHUB_ISSUES_URL, LATEST_STABLE_RELEASE } from '../data/releases';
 
 export const Footer: React.FC = () => {
@@ -10,7 +10,11 @@ export const Footer: React.FC = () => {
         <div className="footer-grid">
           <div className="footer-col" style={{ maxWidth: '360px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1rem' }}>
-              <Shield size={24} color="#38bdf8" />
+              <img
+                src="/logo.png"
+                alt="Package Guard"
+                style={{ width: '28px', height: '28px', borderRadius: '6px', objectFit: 'contain' }}
+              />
               <span style={{ fontWeight: 800, fontSize: '1.2rem', color: 'var(--text-primary)' }}>
                 Package Guard
               </span>
@@ -50,7 +54,6 @@ export const Footer: React.FC = () => {
               <li><Link to="/docs">Installation & Setup</Link></li>
               <li><Link to="/docs#checksum">SHA-256 Verification</Link></li>
               <li><Link to="/docs#smartscreen">SmartScreen Notice</Link></li>
-              <li><Link to="/publication">Research Publication</Link></li>
               <li><Link to="/about">About & Philosophy</Link></li>
             </ul>
           </div>

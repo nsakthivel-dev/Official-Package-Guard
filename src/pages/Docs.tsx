@@ -36,8 +36,9 @@ export const DocsPage: React.FC = () => {
             <a href="#checksum">2. SHA-256 Verification</a>
             <a href="#smartscreen">3. Windows SmartScreen</a>
             <a href="#silent-install">4. Silent Enterprise Deployment</a>
-            <a href="#requirements">5. System Requirements</a>
-            <a href="#troubleshooting">6. Troubleshooting</a>
+            <a href="#cli-storage">5. CLI & Local Storage</a>
+            <a href="#requirements">6. System Requirements</a>
+            <a href="#troubleshooting">7. Troubleshooting</a>
           </div>
         </div>
 
@@ -162,11 +163,67 @@ export const DocsPage: React.FC = () => {
           />
         </section>
 
-        {/* Section 5: System Requirements */}
+        {/* Section 5: CLI & Local Storage */}
+        <section id="cli-storage" style={{ marginBottom: '3.5rem', scrollMarginTop: '100px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1rem' }}>
+            <Terminal size={22} color="#06b6d4" />
+            <h2 style={{ fontSize: '1.5rem' }}>5. Command-Line Interface (`pg`) & Local Storage</h2>
+          </div>
+          <p style={{ marginBottom: '1rem' }}>
+            Package Guard includes a native Windows command-line utility (<code>pg.exe</code>) that connects seamlessly to the desktop app via Named Pipes:
+          </p>
+
+          <CodeSnippet
+            title="CORE PG CLI COMMANDS"
+            language="bash"
+            code={`# Scan project in current directory
+pg scan
+
+# View project health and drift metrics
+pg status
+
+# Create an immutable snapshot checkpoint before updating packages
+pg snapshot create "pre-upgrade"
+
+# Revert working tree to baseline snapshot
+pg rollback
+
+# Run diagnostic scan of CLI, Electron, Pipes & SQLite
+pg doctor`}
+          />
+
+          <h3 style={{ fontSize: '1.15rem', margin: '1.5rem 0 0.75rem' }}>Local Storage Architecture</h3>
+          <p style={{ fontSize: '0.92rem', marginBottom: '1rem' }}>
+            Package Guard stores all data locally on your computer in your Windows roaming user profile:
+          </p>
+
+          <table className="meta-table">
+            <tbody>
+              <tr>
+                <th>Unified SQLite Database</th>
+                <td><code>%APPDATA%\PackageGuard\data\packageguard.db</code></td>
+              </tr>
+              <tr>
+                <th>Snapshot Archives</th>
+                <td><code>%APPDATA%\PackageGuard\snapshots\</code></td>
+              </tr>
+              <tr>
+                <th>Runtime Diagnostic Logs</th>
+                <td><code>%APPDATA%\PackageGuard\logs\</code></td>
+              </tr>
+              <tr>
+                <th>Local Settings</th>
+                <td><code>%APPDATA%\PackageGuard\config\settings.json</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        {/* Section 6: System Requirements */}
         <section id="requirements" style={{ marginBottom: '3.5rem', scrollMarginTop: '100px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1rem' }}>
             <Cpu size={22} color="#38bdf8" />
-            <h2 style={{ fontSize: '1.5rem' }}>5. System Requirements</h2>
+            <h2 style={{ fontSize: '1.5rem' }}>6. System Requirements</h2>
           </div>
 
           <table className="meta-table">
@@ -195,11 +252,11 @@ export const DocsPage: React.FC = () => {
           </table>
         </section>
 
-        {/* Section 6: Troubleshooting */}
+        {/* Section 7: Troubleshooting */}
         <section id="troubleshooting" style={{ marginBottom: '3.5rem', scrollMarginTop: '100px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1rem' }}>
             <HelpCircle size={22} color="#10b981" />
-            <h2 style={{ fontSize: '1.5rem' }}>6. Troubleshooting & Common Questions</h2>
+            <h2 style={{ fontSize: '1.5rem' }}>7. Troubleshooting & Common Questions</h2>
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>

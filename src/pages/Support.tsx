@@ -93,7 +93,7 @@ export const SupportPage: React.FC = () => {
         {/* Verified Contact Note */}
         <div className="callout callout-info" style={{ textAlign: 'center' }}>
           <p style={{ margin: 0, fontSize: '0.95rem' }}>
-            <strong>Official Support Channel:</strong> Community support is conducted openly and transparently via GitHub Issues. We do not operate phone lines or private email ticketing to ensure all solutions benefit the community.
+            <strong>Official Support Contacts:</strong> Submit issues, logs, and feature requests via the <a href={GITHUB_ISSUES_URL} target="_blank" rel="noopener noreferrer">GitHub Issue Tracker</a>, or contact developer support directly at <a href="mailto:nsakthiveldev@gmail.com" style={{ fontFamily: 'var(--font-mono)' }}>nsakthiveldev@gmail.com</a>.
           </p>
         </div>
       </div>

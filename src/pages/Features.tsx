@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, EyeOff, Cpu, Terminal, FileCheck, Zap } from 'lucide-react';
+import { EyeOff, Cpu, Terminal, Layers, RotateCcw, Database } from 'lucide-react';
 import { SeoHead } from '../components/SeoHead';
 import { Link } from 'react-router-dom';
 import { LATEST_STABLE_RELEASE } from '../data/releases';
@@ -9,18 +9,18 @@ export const FeaturesPage: React.FC = () => {
     <>
       <SeoHead
         title="Features & Capabilities — Package Guard"
-        description="Explore the verified technical features of Package Guard: local dependency state tracking, air-gapped zero telemetry, Windows x64 architecture, and silent NSIS setup."
+        description="Explore verified capabilities of Package Guard: Multi-ecosystem scanning for Node.js and Python, native pg CLI with 50+ commands, local SQLite snapshots with rollback safety, and zero cloud telemetry."
       />
 
       <div className="container" style={{ maxWidth: '980px', paddingTop: '1.5rem' }}>
         <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1rem' }}>
             <span className="badge badge-emerald">Verified Features</span>
-            <span className="badge badge-cyan">Package Guard Desktop</span>
+            <span className="badge badge-cyan">Package Guard Desktop & CLI</span>
           </div>
           <h1 style={{ marginBottom: '1rem' }}>Verified Product Capabilities</h1>
-          <p style={{ maxWidth: '680px', margin: '0 auto', fontSize: '1.15rem' }}>
-            Package Guard provides local software dependency state management and security auditing designed specifically for developers on Windows.
+          <p style={{ maxWidth: '720px', margin: '0 auto', fontSize: '1.15rem' }}>
+            Package Guard provides local software dependency state management, snapshot rollbacks, and security auditing for Windows developers.
           </p>
         </div>
 
@@ -29,66 +29,66 @@ export const FeaturesPage: React.FC = () => {
           {/* Feature 1 */}
           <div className="card">
             <div style={{ width: 44, height: 44, borderRadius: 'var(--radius-md)', background: 'rgba(56, 189, 248, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.25rem' }}>
-              <Shield size={22} color="#38bdf8" />
+              <Layers size={22} color="#38bdf8" />
             </div>
-            <h3 style={{ marginBottom: '0.75rem' }}>Local Dependency State Inspection</h3>
+            <h3 style={{ marginBottom: '0.75rem' }}>Multi-Ecosystem Discovery</h3>
             <p>
-              Inspect and track software package states directly from your local disk. Identify unexpected version drift, altered dependencies, and manifest discrepancies without running unsafe build scripts.
+              Automatic detection and state management for both <strong>Node.js</strong> (<code>npm</code>, <code>pnpm</code>, <code>yarn</code>, <code>bun</code>) and <strong>Python</strong> environments (<code>venv</code>, <code>.venv</code>, <code>Conda</code>, <code>pip</code>).
             </p>
           </div>
 
           {/* Feature 2 */}
           <div className="card">
-            <div style={{ width: 44, height: 44, borderRadius: 'var(--radius-md)', background: 'rgba(16, 185, 129, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.25rem' }}>
-              <EyeOff size={22} color="#10b981" />
+            <div style={{ width: 44, height: 44, borderRadius: 'var(--radius-md)', background: 'rgba(245, 158, 11, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.25rem' }}>
+              <Terminal size={22} color="#f59e0b" />
             </div>
-            <h3 style={{ marginBottom: '0.75rem' }}>Air-Gapped & Zero Telemetry</h3>
+            <h3 style={{ marginBottom: '0.75rem' }}>Native CLI Tool (`pg`)</h3>
             <p>
-              Built from the ground up on a local-first philosophy. Your project paths, dependency trees, authentication tokens, and code remain on your machine. Zero tracking or telemetry is transmitted.
+              Includes a native Windows C# CLI wrapper (<code>pg.exe</code>) with over 50 enterprise commands for scanning, diffing, snapshotting, auditing, diagnostics, and repairs directly in your terminal.
             </p>
           </div>
 
           {/* Feature 3 */}
           <div className="card">
-            <div style={{ width: 44, height: 44, borderRadius: 'var(--radius-md)', background: 'rgba(99, 102, 241, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.25rem' }}>
-              <Cpu size={22} color="#818cf8" />
+            <div style={{ width: 44, height: 44, borderRadius: 'var(--radius-md)', background: 'rgba(16, 185, 129, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.25rem' }}>
+              <RotateCcw size={22} color="#10b981" />
             </div>
-            <h3 style={{ marginBottom: '0.75rem' }}>Windows Native Desktop Runtime</h3>
+            <h3 style={{ marginBottom: '0.75rem' }}>Snapshot Engine & Rollbacks</h3>
             <p>
-              Tailored for Windows 10 and Windows 11 (64-bit x64). Packaged with Electron to deliver an intuitive desktop UI, smooth window controls, and low resource overhead.
+              Create immutable snapshot checkpoints before dependency updates. Instantly revert your working tree to a known good state with <code>pg rollback</code> if a package breaks your project.
             </p>
           </div>
 
           {/* Feature 4 */}
           <div className="card">
-            <div style={{ width: 44, height: 44, borderRadius: 'var(--radius-md)', background: 'rgba(245, 158, 11, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.25rem' }}>
-              <Terminal size={22} color="#f59e0b" />
+            <div style={{ width: 44, height: 44, borderRadius: 'var(--radius-md)', background: 'rgba(99, 102, 241, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.25rem' }}>
+              <Database size={22} color="#818cf8" />
             </div>
-            <h3 style={{ marginBottom: '0.75rem' }}>Headless Silent Setup (/S)</h3>
+            <h3 style={{ marginBottom: '0.75rem' }}>Local Unified SQLite Storage</h3>
             <p>
-              Packaged using Nullsoft Scriptable Install System (NSIS), supporting the standard <code>/S</code> silent switch for automated IT workstation deployment and developer environment provisioning.
+              All state histories, project metrics, and event queues are stored in a local SQLite database at <code>%APPDATA%\PackageGuard\data\</code>. No cloud database or accounts required.
             </p>
           </div>
 
           {/* Feature 5 */}
           <div className="card">
             <div style={{ width: 44, height: 44, borderRadius: 'var(--radius-md)', background: 'rgba(6, 182, 212, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.25rem' }}>
-              <FileCheck size={22} color="#06b6d4" />
+              <EyeOff size={22} color="#06b6d4" />
             </div>
-            <h3 style={{ marginBottom: '0.75rem' }}>Cryptographic Integrity Verification</h3>
+            <h3 style={{ marginBottom: '0.75rem' }}>Air-Gapped & Zero Telemetry</h3>
             <p>
-              Every release is published with verified SHA-256 checksums on GitHub Releases. Users can verify byte-for-byte binary authenticity in PowerShell before executing the setup wizard.
+              Built from the ground up on a local-first philosophy. Your project paths, dependency trees, and proprietary code remain on your machine. Zero tracking or telemetry is transmitted.
             </p>
           </div>
 
           {/* Feature 6 */}
           <div className="card">
             <div style={{ width: 44, height: 44, borderRadius: 'var(--radius-md)', background: 'rgba(244, 63, 94, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.25rem' }}>
-              <Zap size={22} color="#f43f5e" />
+              <Cpu size={22} color="#f43f5e" />
             </div>
-            <h3 style={{ marginBottom: '0.75rem' }}>Minimal Footprint</h3>
+            <h3 style={{ marginBottom: '0.75rem' }}>Live IPC via Named Pipes</h3>
             <p>
-              Requires under 250 MB of disk space. Operates efficiently without continuous cloud sync agents or memory-heavy background daemons running in the background.
+              Seamless real-time synchronization between the Windows desktop GUI and the <code>pg</code> CLI through local Windows Named Pipes, with automatic offline queue reconciliation.
             </p>
           </div>
         </div>
@@ -113,24 +113,29 @@ export const FeaturesPage: React.FC = () => {
                 <td>High (Manifest uploaded to cloud)</td>
               </tr>
               <tr>
+                <td>Supported Ecosystems</td>
+                <td style={{ color: '#10b981', fontWeight: 600 }}>Node.js (npm/pnpm/yarn/bun) + Python (venv/conda)</td>
+                <td>Often limited to Node.js or single lockfile</td>
+              </tr>
+              <tr>
+                <td>Command-Line Interface</td>
+                <td>Native Windows CLI (<code>pg.exe</code> with 50+ commands)</td>
+                <td>Thin cloud API wrapper or none</td>
+              </tr>
+              <tr>
+                <td>Snapshot & Instant Rollback</td>
+                <td style={{ color: '#10b981', fontWeight: 600 }}>Local SQLite Snapshot Store</td>
+                <td>Requires Git branch rebasing</td>
+              </tr>
+              <tr>
+                <td>Local Database</td>
+                <td>Embedded SQLite (<code>packageguard.db</code>)</td>
+                <td>Remote vendor database</td>
+              </tr>
+              <tr>
                 <td>Network Telemetry</td>
                 <td style={{ color: '#10b981', fontWeight: 600 }}>None / Disabled</td>
                 <td>Continuous analytics & tracking</td>
-              </tr>
-              <tr>
-                <td>Target Platform</td>
-                <td>Windows 10 / 11 (x64)</td>
-                <td>Web-only dashboard or container</td>
-              </tr>
-              <tr>
-                <td>Silent Enterprise Setup</td>
-                <td>Standard NSIS <code>/S</code> flag</td>
-                <td>Custom agent installers</td>
-              </tr>
-              <tr>
-                <td>Offline / Air-Gapped Operation</td>
-                <td style={{ color: '#10b981', fontWeight: 600 }}>Fully Supported</td>
-                <td>Unsupported (Requires Cloud API)</td>
               </tr>
             </tbody>
           </table>

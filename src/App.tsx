@@ -9,7 +9,6 @@ import { FeaturesPage } from './pages/Features';
 import { DocsPage } from './pages/Docs';
 import { PrivacyPage } from './pages/Privacy';
 import { SecurityPage } from './pages/Security';
-import { PublicationPage } from './pages/Publication';
 import { ChangelogPage } from './pages/Changelog';
 import { AboutPage } from './pages/About';
 import { SupportPage } from './pages/Support';
@@ -72,8 +71,6 @@ export const App: React.FC = () => {
           <Route path="/privacy/" element={<PrivacyPage />} />
           <Route path="/security" element={<SecurityPage />} />
           <Route path="/security/" element={<SecurityPage />} />
-          <Route path="/publication" element={<PublicationPage />} />
-          <Route path="/publication/" element={<PublicationPage />} />
           <Route path="/changelog" element={<ChangelogPage />} />
           <Route path="/changelog/" element={<ChangelogPage />} />
           <Route path="/about" element={<AboutPage />} />

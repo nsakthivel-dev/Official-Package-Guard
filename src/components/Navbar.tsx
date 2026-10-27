@@ -41,12 +41,11 @@ export const Navbar: React.FC = () => {
       <div className="container nav-container">
         <Link to="/" className="brand-link" onClick={closeMobile} aria-label="Package Guard Homepage">
           <div className="brand-logo-wrap">
-            <svg viewBox="0 0 64 64" fill="none" style={{ width: '32px', height: '32px' }} aria-hidden="true">
-              <path d="M32 6L54 14V32C54 44.5 44.5 54.8 32 58C19.5 54.8 10 44.5 10 32V14L32 6Z" fill="#0f172a" stroke="#3b82f6" strokeWidth="3" strokeLinejoin="round"/>
-              <path d="M32 14L46 19.5V31.5C46 39.8 39.8 46.8 32 49.5C24.2 46.8 18 39.8 18 31.5V19.5L32 14Z" fill="#3b82f6" fillOpacity="0.15" stroke="#10b981" strokeWidth="2" strokeLinejoin="round"/>
-              <rect x="25" y="27" width="14" height="12" rx="2.5" fill="#38bdf8"/>
-              <path d="M28 27V23C28 20.8 29.8 19 32 19C34.2 19 36 20.8 36 23V27" stroke="#38bdf8" strokeWidth="2.5" strokeLinecap="round"/>
-            </svg>
+            <img
+              src="/logo.png"
+              alt="Package Guard"
+              style={{ width: '32px', height: '32px', borderRadius: '6px', objectFit: 'contain' }}
+            />
           </div>
           <span>Package Guard</span>
         </Link>
@@ -71,9 +70,6 @@ export const Navbar: React.FC = () => {
           </NavLink>
           <NavLink to="/releases" className={({ isActive }) => `nav-item-link ${isActive ? 'active' : ''}`} onClick={closeMobile}>
             Releases
-          </NavLink>
-          <NavLink to="/publication" className={({ isActive }) => `nav-item-link ${isActive ? 'active' : ''}`} onClick={closeMobile}>
-            Research
           </NavLink>
           <NavLink to="/security" className={({ isActive }) => `nav-item-link ${isActive ? 'active' : ''}`} onClick={closeMobile}>
             Security

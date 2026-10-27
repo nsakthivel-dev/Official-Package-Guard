@@ -15,12 +15,23 @@ export const Home: React.FC = () => {
       {/* Hero Section */}
       <section style={{ padding: '3.5rem 0 4.5rem', textAlign: 'center' }}>
         <div className="container" style={{ maxWidth: '940px' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.25rem' }}>
+            <img
+              src="/logo.png"
+              alt="Package Guard Logo"
+              style={{ width: '72px', height: '72px', borderRadius: '16px', objectFit: 'contain', boxShadow: '0 8px 30px rgba(0, 0, 0, 0.4)' }}
+            />
+          </div>
+
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1.5rem' }}>
             <span className="badge badge-emerald">
               ● Official Release v{LATEST_STABLE_RELEASE.version}
             </span>
             <span className="badge badge-cyan">
               Windows 10 / 11 (x64)
+            </span>
+            <span className="badge badge-indigo">
+              Node.js + Python
             </span>
           </div>
 
@@ -36,7 +47,7 @@ export const Home: React.FC = () => {
           </h1>
 
           <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', maxWidth: '780px', margin: '0 auto 2.5rem' }}>
-            Package Guard is a dedicated Windows desktop application built with Electron to inspect, audit, and safeguard local software package states without transmitting your code or metadata to the cloud.
+            Package Guard combines a native Electron desktop GUI with a 50+ command C# CLI (<code>pg</code>) to audit, snapshot, and safeguard local Node.js and Python dependencies on Windows with zero cloud telemetry.
           </p>
 
           <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
@@ -224,8 +235,8 @@ export const Home: React.FC = () => {
               <Link to="/docs" className="btn btn-secondary">
                 <span>View Documentation</span>
               </Link>
-              <Link to="/publication" className="btn btn-outline">
-                <span>Research Publication Status</span>
+              <Link to="/features" className="btn btn-outline">
+                <span>Explore Features</span>
               </Link>
             </div>
           </div>
