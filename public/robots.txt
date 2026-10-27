@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://packageguard.vercel.app/sitemap.xml
