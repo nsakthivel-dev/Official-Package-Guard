@@ -35,7 +35,7 @@ export const Footer: React.FC = () => {
           <div className="footer-col">
             <h4>Product</h4>
             <ul className="footer-links">
-              <li><Link to="/download">Download Windows EXE</Link></li>
+              <li><Link to="/download">Download (EXE, MSI, MSIX)</Link></li>
               <li><Link to="/features">Verified Features</Link></li>
               <li><Link to="/releases">Release History</Link></li>
               <li><Link to="/changelog">Changelog</Link></li>

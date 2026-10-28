@@ -61,7 +61,7 @@ export const Home: React.FC = () => {
             </a>
 
             <Link to="/download" className="btn btn-secondary btn-lg">
-              <span>Release Details & Checksum</span>
+              <span>Download Options (.EXE, .MSI, .MSIX)</span>
               <ArrowRight size={18} />
             </Link>
           </div>

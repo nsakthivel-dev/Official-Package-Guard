@@ -49,7 +49,7 @@ export const DocsPage: React.FC = () => {
             <h2 style={{ fontSize: '1.5rem' }}>1. Installing Package Guard</h2>
           </div>
           <p style={{ marginBottom: '1rem' }}>
-            Package Guard is delivered as a standalone Windows setup executable (<code>{release.installerFilename}</code>) powered by NSIS.
+            Package Guard is delivered in three official Windows formats on the <a href="/download">Download page</a>: standalone executable (<code>PackageGuard-Setup.exe</code>), enterprise Windows installer (<code>PackageGuard-1.0.0-x64.msi</code>), and modern package (<code>PackageGuard-1.0.0-x64.msix</code>).
           </p>
 
           <div className="card" style={{ marginBottom: '1.5rem' }}>
